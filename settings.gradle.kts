@@ -24,3 +24,4 @@ rootProject.name = "KotlinDroidKit"
 include(":core")
 include(":ui")
 include(":networking")
+include(":data")
