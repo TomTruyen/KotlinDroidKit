@@ -9,7 +9,7 @@ lifecycle-ktx = "2.6.2"
 activity-compose = "1.8.0"
 compose-bom = "2023.10.00"
 appcompat = "1.6.1"
-material = "1.9.0"
+material = "1.10.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
