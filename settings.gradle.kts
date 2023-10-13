@@ -22,4 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "KotlinDroidKit"
 
 include(":core")
- 
+include(":ui")
