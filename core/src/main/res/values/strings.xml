@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">core</string>
+    <string name="crash_title">Oops, something went wrong.</string>
+    <string name="crash_button">Show error</string>
 </resources>
