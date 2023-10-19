@@ -28,7 +28,7 @@ import kotlinx.coroutines.launch
  * @return Instance of the [ScrollKitState].
  */
 @Composable
-public fun rememberLazyLayoutScrollState(
+fun rememberLazyLayoutScrollState(
     initialOffset: ScrollKitPositionProvider.() -> Offset = { Offset.Zero }
 ): ScrollKitState {
     return remember { ScrollKitState(initialOffset) }
