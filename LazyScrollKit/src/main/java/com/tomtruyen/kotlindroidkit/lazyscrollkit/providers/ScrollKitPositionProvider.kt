@@ -38,8 +38,6 @@ interface ScrollKitPositionProvider {
     ): Offset
 
     /**
-     * TODO
-     *
      * @param itemSize
      * @param alignment
      * @param paddingStart

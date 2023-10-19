@@ -120,7 +120,7 @@ class ScrollKitState(
      *
      * @param value The value to translate by.
      */
-    public suspend fun dragBy(value: Offset) {
+    suspend fun dragBy(value: Offset) {
         coroutineScope {
             launch {
                 translateX.snapTo(translateX.value - value.x)
@@ -137,7 +137,7 @@ class ScrollKitState(
      * @param x The new offset on the X axis.
      * @param y The new offset on the Y axis.
      */
-    public suspend fun animateTo(x: Float = translateX.value, y: Float = translateY.value) {
+    suspend fun animateTo(x: Float = translateX.value, y: Float = translateY.value) {
         coroutineScope {
             launch {
                 translateX.animateTo(x)
@@ -154,7 +154,7 @@ class ScrollKitState(
      * @param x The new offset on the X axis.
      * @param y The new offset on the Y axis.
      */
-    public suspend fun snapTo(x: Float = translateX.value, y: Float = translateY.value) {
+    suspend fun snapTo(x: Float = translateX.value, y: Float = translateY.value) {
         coroutineScope {
             launch {
                 translateX.snapTo(x)
@@ -170,7 +170,7 @@ class ScrollKitState(
      *
      * @param velocity The velocity to fling by.
      */
-    public suspend fun flingBy(velocity: Velocity) {
+    suspend fun flingBy(velocity: Velocity) {
         coroutineScope {
             launch {
                 translateX.animateDecay(-velocity.x, exponentialDecay())
@@ -184,7 +184,7 @@ class ScrollKitState(
     /**
      * Stops current offset animations.
      */
-    public suspend fun stopAnimation() {
+    suspend fun stopAnimation() {
         coroutineScope {
             launch {
                 translateX.stop()
@@ -205,7 +205,7 @@ class ScrollKitState(
      * @param paddingEnd An additional end padding to tweak alignment.
      * @param paddingBottom An additional bottom padding to tweak alignment.
      */
-    public suspend fun animateTo(
+    suspend fun animateTo(
         index: Int,
         alignment: Alignment = Alignment.Center,
         paddingStart: Float = 0f,
@@ -236,7 +236,7 @@ class ScrollKitState(
      * @param paddingEnd An additional end padding to tweak alignment.
      * @param paddingBottom An additional bottom padding to tweak alignment.
      */
-    public suspend fun snapTo(
+    suspend fun snapTo(
         index: Int,
         alignment: Alignment = Alignment.Center,
         paddingStart: Float = 0f,
@@ -265,10 +265,10 @@ class ScrollKitState(
      * @property maxX The max offset on on the X axis in pixels.
      * @property maxY The max offset on on the Y axis in pixels.
      */
-    public class Translate(
-        public val x: Float,
-        public val y: Float,
-        public val maxX: Float,
-        public val maxY: Float,
+    data class Translate(
+        val x: Float,
+        val y: Float,
+        val maxX: Float,
+        val maxY: Float,
     )
 }
